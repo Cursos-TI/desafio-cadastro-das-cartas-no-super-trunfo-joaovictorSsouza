@@ -4,7 +4,22 @@
 // Tema 1 - Cadastro das Cartas
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 // Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+//Teste João Victor
+
+float densidade1, densidade2, ppc1, ppc2;
+int popu1, popu2;
+float area1, area2;
+float pib1, pib2;
+
+float Calculos(){
+    //calculo de densidade populacional:
+    densidade1 = popu1 / area1;
+    densidade2 = popu2 / area2;
+
+    // calculo de PIB per Capita:
+    ppc1 = pib1 / popu1;
+    ppc2 = pib2 / pib2;
+}
 
 int main() {
     // Definição das variaveis: 
@@ -15,7 +30,8 @@ int main() {
     float area1, area2;
     float pib1, pib2;
     int npt1, npt2;
-    
+    float densidade1, densidade2, ppc1, ppc2;
+
     // Cadastro da Carta 1:
     printf("Carta 1:\n");
 
@@ -67,6 +83,9 @@ int main() {
     printf("Informe o numero de pontos turisticos:\n");
     scanf("%d", &npt2);
 
+    // Função para calculos
+    Calculos();
+
     // Divisão 
     printf("-----------------------------------------\n");
 
@@ -79,6 +98,8 @@ int main() {
     printf("Área: %f\n", area1);
     printf("PIB: %f\n", pib1);
     printf("Numero de ponto turistico: %d\n", npt1);
+    printf("Densidade Populacional: %.2f\n", densidade1);
+    printf("PIB per Capita: %f\n", ppc1);
 
     //Divisão
     printf("----------------------------------------------\n");
@@ -92,6 +113,9 @@ int main() {
     printf("Área: %f\n", area2);
     printf("PIB: %f\n", pib2);
     printf("Numero de ponto turistico: %d\n", npt2);
+    printf("Densidade Populacional: %.2f\n", densidade2);
+    printf("PIB per Capita: %f\n", ppc2);
 
     return 0;
 }
+
